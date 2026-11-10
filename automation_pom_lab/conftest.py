@@ -11,6 +11,11 @@ def driver():
     # Menghapus logging berlebih di terminal
     options.add_argument("--log-level=3")
     options.add_argument("--start-maximized")
+    prefs = {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False,
+        "profile.password_manager_leak_detection": False,
+    }
 
     # Opsi headless jika ingin berjalan di CI/CD atau tanpa GUI:
     # options.add_argument("--headless=new")
